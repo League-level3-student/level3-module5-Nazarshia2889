@@ -7,21 +7,33 @@ public class RecursionMath {
             // Return number 
 
         // Else return number + recursionMultiplication(number, times-1)
-
-        return 0;
+    	if(times == 1) {
+			return number;
+		}
+		else {
+			return number + recursiveMultiplication(number, times-1);
+		}
     }
 
     // Try this one on your own! 
     // Hint: if numberToDivideBy is bigger than number,
     //       you can't divide anymore
     public static int recursiveDivision(int number, int numberToDevideBy) {
-        
-        return 0;
+    	if(numberToDevideBy <= number) {
+			return 1 + recursiveDivision(number-numberToDevideBy, numberToDevideBy);
+		}
+		else {
+			return 0;
+		}
     }
 
     // Try this one on your own!
     public static int recursivePower(int number, int power) {
-        
-        return 0;
+    	if(power == 1) {
+			return number;
+		}
+		else {
+			return number * recursivePower(number, power-1);
+		}
     }
 }
